@@ -7,7 +7,7 @@ import { LoginData } from '../interfaces/login.interface';
 })
 export class LoginService {
 
-  apiUrl = 'Cuenta/Login';
+  apiUrl = '/WebAPI/api/Cuenta/Login';
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
