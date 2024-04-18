@@ -1,0 +1,13 @@
+{
+  "/api": {
+    "target": "https://test.novasoft.com.co:8091",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": "/WebAPI/api"
+    }
+  }
+}
+
+  
+  
