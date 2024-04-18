@@ -1,1 +1,104 @@
-<p>list works!</p>
+<div class="example-spacer">
+    <button mat-raised-button color="primary" routerLink="/create">Agregar</button>
+</div>
+
+<div class="container">
+    <mat-form-field class="custom-form-field">
+        <mat-label>Filtrar</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ejemplo: Julian" #input>
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+        <ng-container matColumnDef="codCli">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Codigo </th>
+            <td mat-cell *matCellDef="let element"> {{element.codCli}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipIde">
+            <th mat-header-cell *matHeaderCellDef> Tipo de identificación </th>
+            <td mat-cell *matCellDef="let element"> {{element.tipIde}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nitCli">
+            <th mat-header-cell *matHeaderCellDef> NIT </th>
+            <td mat-cell *matCellDef="let element"> {{element.nitCli}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="digVer">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> D. V. </th>
+            <td mat-cell *matCellDef="let element"> {{element.digVer}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="nomCli">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.nomCli}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ap1Cli">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Apellido </th>
+            <td mat-cell *matCellDef="let element"> {{element.ap1Cli}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nom1Cli">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.nom1Cli}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="eMail">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.eMail}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipPer">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </th>
+            <td mat-cell *matCellDef="let element"> {{element.tipPer}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="codCiu">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Codigo diudad </th>
+            <td mat-cell *matCellDef="let element"> {{element.codCiu}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="codDep">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Codigo departamento </th>
+            <td mat-cell *matCellDef="let element"> {{element.codDep}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="codPai">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Codigo pais </th>
+            <td mat-cell *matCellDef="let element"> {{element.codPai}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="di1Cli">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Dirección </th>
+            <td mat-cell *matCellDef="let element"> {{element.di1Cli}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="te1Cli">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> te1Cli </th>
+            <td mat-cell *matCellDef="let element"> {{element.te1Cli}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipCli">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo cliente </th>
+            <td mat-cell *matCellDef="let element"> {{element.tipCli}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fecIng">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha </th>
+            <td mat-cell *matCellDef="let element"> {{element.fecIng}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="codCliExtr">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Codigo </th>
+            <td mat-cell *matCellDef="let element"> {{element.codCliExtr}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>
+
+<h2 *ngIf="listAccounts.length == 0"> No hay estudiantes por mostrar </h2>

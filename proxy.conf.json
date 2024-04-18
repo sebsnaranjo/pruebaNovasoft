@@ -1,5 +1,5 @@
 {
-  "/WebAPI/api/Cuenta/*": {
+  "/WebAPI/api/*": {
     "target": "https://test.novasoft.com.co:8091",
     "secure": false,
     "changeOrigin": true

@@ -7,7 +7,7 @@ import { LoginData } from '../interfaces/login.interface';
 })
 export class LoginService {
 
-  apiUrl = '/WebAPI/api/Cuenta/Login';
+  apiUrl = '/WebAPI/api';
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -15,6 +15,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   login(login: LoginData) {
-    return this.http.post<any>(`${this.apiUrl}`, login, this.httpOptions);
+    const additionalPart = "Cuenta/Login"; 
+    return this.http.post<any>(`${this.apiUrl}/${additionalPart}`, login, this.httpOptions);
   }
 }
