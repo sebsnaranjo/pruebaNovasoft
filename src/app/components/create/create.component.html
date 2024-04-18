@@ -1,1 +1,127 @@
-<p>create works!</p>
+<div class="container">
+    <div class="toolbar-wrapper">
+        <mat-toolbar>
+            <span class="toolbar-text">Crear cuenta</span>
+        </mat-toolbar>
+    </div>
+    <mat-card>
+        <form [formGroup]="form" (ngSubmit)="addAccount()">
+            <mat-grid-list cols="4" rowHeight="70px">
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el codigo del cliente</mat-label>
+                        <input matInput formControlName="codCli">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="3" [rowspan]="5">
+                    <img class="logo" src="./assets/crear.jpeg">
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el tipo de identificación</mat-label>
+                        <input matInput formControlName="tipIde">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el NIT</mat-label>
+                        <input matInput formControlName="nitCli">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el nombre del cliente</mat-label>
+                        <input matInput formControlName="nomCli">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el nombre del cliente</mat-label>
+                        <input matInput formControlName="nom1Cli">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el apellido del cliente</mat-label>
+                        <input matInput formControlName="ap1Cli">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el email del cliente</mat-label>
+                        <input matInput formControlName="eMail">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el tipo per del cliente</mat-label>
+                        <input matInput formControlName="tipPer">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese la ciudad del cliente</mat-label>
+                        <input matInput formControlName="codCiu">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el departamento del cliente</mat-label>
+                        <input matInput formControlName="codDep">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el pais del cliente</mat-label>
+                        <input matInput formControlName="codPai">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese la direccion del cliente</mat-label>
+                        <input matInput formControlName="di2Cli">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el telefono del cliente</mat-label>
+                        <input matInput formControlName="te1Cli">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el tipo del cliente</mat-label>
+                        <input matInput formControlName="tipCli">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese pagWeb</mat-label>
+                        <input matInput formControlName="pagWeb">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese la fecha del cliente</mat-label>
+                        <input matInput formControlName="fecIng">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el codigo extra del cliente</mat-label>
+                        <input matInput formControlName="codCliExtr">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" >
+                    <mat-form-field class="espacio">
+                        <mat-label>Ingrese el estado del cliente</mat-label>
+                        <input matInput formControlName="estCli">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Aceptar</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+</div>
